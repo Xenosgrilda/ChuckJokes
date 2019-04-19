@@ -1,46 +1,21 @@
-document.querySelector('.get-jokes').addEventListener('click', getJokes);
+document.querySelector('.get-jokes').addEventListener('click', handleClick);
 
 // Criando a Função getJokes
-function getJokes()
+async function handleClick()
 {
+  // Elements
   const jokesUl = document.querySelector('.jokes');
-  let number = document.querySelector('input[type = "number"]').value;
+  const amount = document.querySelector('input[type = "number"]').value;
 
-  number === '' ? (number = 1) : (number = number);
+  // Getting Data
+  const response = await Jokes.getJoke(amount);
+  console.log(response);
 
-  const xhr = new XMLHttpRequest ();
+  // Displaying Data
+  jokesUl.innerHTML = '';
+  response.value.forEach( jokeData => {
+    jokesUl.innerHTML += `<li> ${jokeData.joke} </li>`;
+  });
 
-  xhr.open('GET',`http://api.icndb.com/jokes/random/${number}`, true);
-
-  xhr.onload = function()
-  {
-    if(this.status === 200)
-    {
-      const response = JSON.parse(this.responseText);
-
-      let output = '';
-
-      if(response.type === 'success')
-      {
-        console.log(response);
-        // Coloca-se .value pois o retorno é em objeto não em array
-        response.value.forEach(joke =>
-        {
-            output += `<li>${joke.joke}</li>`;
-        });
-      }
-
-      else
-      {
-        output += '<li>Algo deu errado...</li>';
-      };
-
-      jokesUl.innerHTML = output;
-      jokesUl.style.display = 'block';
-    }
-  }
-
-  xhr.send();
-
-  event.preventDefault()
+  jokesUl.style.display !== 'block' ? jokesUl.style.display = 'block': null;
 }
