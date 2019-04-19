@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
-  <link rel="stylesheet" href="main.css">
-  <title>Chuck Norris Joke Generator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <link rel="stylesheet" href="static/main.css" />
+    <title>Chuck Norris Joke Generator</title>
 </head>
 <body>
-  <div class="container">
-
-
-    <!-- Div para o Conteúdo -->
-    <img src="img/logo.png" alt="chucklogo" />
-
     <div class="wrapper">
-        <h2>Chuck Norris Joke Generator</h2>
-        <div class="card">
-          <!-- Div para o Form -->
-          <div class="form">
-            <form>
-                <div>
-                  <label for="number">Number of jokes</label>
-                  <input type="number" id="number" min="0">
-                </div>
-                <div>
-                  <button class="get-jokes">Get Jokes</button>
-                </div>
-              </form>
-          </div>
-          <!-- Fim Div para o Form -->
-          <ul class="jokes"></ul>
+        <img src="static/img/chuck-thumbs-up.jpg" alt="chucklogo" />
+        <h2 class="title">Chuck Norris Joke Generator</h2>
+            <div class="form-control">
+                <form>
+                    <div class="row">
+                        <label for="number">Number of jokes</label>
+                        <input type="number" id="number" min="0" />
+                    </div>
+                    <div class="row">
+                        <button class="get-jokes">Get Jokes</button>
+                    </div>
+                </form>
         </div>
-        <!-- Fim Div para Conteúdo -->
+        <ul class="jokes"></ul>
     </div>
-  </div>
 
-  <script src="app.js"></script>
+<script src="src/app.js"></script>
 </body>
 </html>

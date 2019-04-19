@@ -1,0 +1,102 @@
+@font-face {
+    font-family: Drawing Guides;
+    src: url("./fonts/Drawing Guides.ttf");
+}
+
+body
+{
+    background: #B37D4E;
+}
+
+
+ul
+{
+    display: none;
+    border: 5px solid saddlebrown;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+label 
+{
+    padding-top: 5px;
+    text-align: right;
+    float:left;
+    margin-right:15px;
+}
+
+button
+{
+    display: block;
+    width: 100%;
+}
+
+img
+{
+    position: relative;
+    top: -220px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    border: 30px solid white;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1050px){
+    img{
+        width: 250px;
+    }
+
+    .wrapper{
+        width: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    img{
+        width: 225px;
+    }
+}
+
+
+.wrapper
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 200px;
+    width: 50%;
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.title{
+    text-align: center;
+    font-family: "Drawing Guides";
+    font-size: 3.2em;
+    margin-top: -220px;
+}
+
+.form-control
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+.row{
+    display: flex;
+}
+
+label{
+    display: inline-block;
+    width: 130px;
+    white-space: nowrap;
+}
+
+input
+{
+    flex-grow: 100;
+}

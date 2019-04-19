@@ -3,6 +3,7 @@ document.querySelector('.get-jokes').addEventListener('click', getJokes);
 // Criando a Função getJokes
 function getJokes()
 {
+  const jokesUl = document.querySelector('.jokes');
   let number = document.querySelector('input[type = "number"]').value;
 
   number === '' ? (number = 1) : (number = number);
@@ -23,7 +24,7 @@ function getJokes()
       {
         console.log(response);
         // Coloca-se .value pois o retorno é em objeto não em array
-        response.value.forEach(joke => 
+        response.value.forEach(joke =>
         {
             output += `<li>${joke.joke}</li>`;
         });
@@ -34,7 +35,8 @@ function getJokes()
         output += '<li>Algo deu errado...</li>';
       };
 
-      document.querySelector('.jokes').innerHTML = output;
+      jokesUl.innerHTML = output;
+      jokesUl.style.display = 'block';
     }
   }
 
