@@ -1,6 +1,5 @@
 document.querySelector('.get-jokes').addEventListener('click', handleClick);
 
-// Criando a Função getJokes
 async function handleClick()
 {
   // Elements
@@ -9,7 +8,6 @@ async function handleClick()
 
   // Getting Data
   const response = await Jokes.getJoke(amount);
-  console.log(response);
 
   // Displaying Data
   jokesUl.innerHTML = '';
