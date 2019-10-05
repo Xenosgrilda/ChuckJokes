@@ -5,14 +5,16 @@
 
 body
 {
-    background: #B37D4E;
+    background-image: url(../img/flames-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 ul
 {
     display: none;
-    border: 5px solid saddlebrown;
+    border: 5px solid black;
     border-radius: 10px;
     margin-top: 10px;
     padding: 10px;
@@ -30,6 +32,14 @@ button
 {
     display: block;
     width: 100%;
+}
+
+button:focus{
+    outline: 0;
+}
+
+button::-moz-focus-inner {
+    border: 0;
 }
 
 img
@@ -68,7 +78,7 @@ img
     margin-top: 200px;
     width: 50%;
     background: white;
-    padding: 50px;
+    padding: 35px;
     border-radius: 10px;
 }
 
