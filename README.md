@@ -4,3 +4,4 @@ All jokes are fetched from http://www.icndb.com/api/
 
 ## Built With
 * JavaScript ES7
+* [Skeleton CSS](http://getskeleton.com/) - 2.0.4
