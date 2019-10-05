@@ -3,7 +3,7 @@ class Jokes {
         num === '' ? num = 1 : null;
 
         try {
-            const data = await fetch(`http://api.icndb.com/jokes/random/${num}`);
+            const data = await fetch(`https://api.icndb.com/jokes/random/${num}`);
             return await data.json();
 
         }catch (err) {
