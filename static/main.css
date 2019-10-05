@@ -5,7 +5,7 @@
 
 body
 {
-    background-image: url(../img/flames-background.jpg);
+    background-image: url(../static/img/flames-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
